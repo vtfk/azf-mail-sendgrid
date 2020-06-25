@@ -1,7 +1,7 @@
 {
     "to": "required|array",
-    "cc": "sometimes|string",
-    "bcc": "sometimes|string",
+    "cc": "sometimes|array",
+    "bcc": "sometimes|array",
     "from": "required|string",
     "replyTo": "sometimes|string",
     "subject": "required|string",
