@@ -7,7 +7,13 @@
 	"to": [
 		"kari@nordmann.no",
 		"bjarne@nordmann.no"
-	],
+    ],
+    "cc": [
+        "kjartan@nordmann.no"
+    ],
+    "bcc": [
+        "rolf@nordmann.no"
+    ],
 	"from": "Ola Nordmann <ola@nordmann.no>",
 	"subject": "Test",
 	"isMultiple": true,
@@ -21,7 +27,8 @@
             "title": "Sjef",
             "department": "EDB-avdelinga",
             "company": "Brukerbehov, avdigitalisering og kommunisering",
-			"phone": "81549300"
+            "phone": "81549300",
+            "mobile": "01189998819919117253"
         }
 	}
 }
