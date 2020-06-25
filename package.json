@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "Rune Moskvil Lyngås <rune.moskvil.lyngaas@vtfk.no>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.1",
+    "node-input-validator": "^4.2.0"
+  }
 }

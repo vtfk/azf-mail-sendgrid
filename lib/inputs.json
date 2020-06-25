@@ -1,0 +1,16 @@
+{
+    "to": "required|array",
+    "cc": "sometimes|string",
+    "bcc": "sometimes|string",
+    "from": "required|string",
+    "replyTo": "sometimes|string",
+    "subject": "required|string",
+    "text": "requiredWithout:html|string",
+    "html": "requiredWithout:text|string",
+    "isMultiple": "sometimes|boolean",
+    "headers": "sometimes|object",
+    "attachments": "sometimes|array",
+    "attachments.*.content": "required|base64",
+    "attachments.*.filename": "required|string",
+    "attachments.*.type": "required|string"
+}
