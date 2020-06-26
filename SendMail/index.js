@@ -15,14 +15,14 @@ module.exports = async function (context, req) {
         }
         else {
             context.res = {
-                status: 418,
+                status: 500,
                 body: mail
             };
         }
     }
     else {
         context.res = {
-            status: 404,
+            status: 400,
             body: "Failed validation..."
         };
     }
