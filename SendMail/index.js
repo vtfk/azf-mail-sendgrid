@@ -5,25 +5,41 @@ const sendMail = require('../lib/send-mail');
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    const matched = await validateInput(req);
-    if (matched) {
+    const { validationMatched, validationError, validationMessage } = await validateInput(req);
+    if (validationMatched) {
         let mail = generateMail(req.body);
-        if (await sendMail(mail)) {
+        let { mailStatus, mailError } = await sendMail(mail);
+        if (mailStatus) {
             context.res = {
-                body: mail
+                body: mail,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             };
         }
         else {
             context.res = {
                 status: 500,
-                body: mail
+                body: {
+                    error: mailError || '',
+                    mail
+                },
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             };
         }
     }
     else {
         context.res = {
             status: 400,
-            body: "Failed validation..."
+            body: {
+                message: validationMessage,
+                error: validationError || ''
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            }
         };
     }
 }
