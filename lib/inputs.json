@@ -4,7 +4,7 @@
     "bcc": "sometimes|array",
     "from": "required|string",
     "replyTo": "sometimes|string",
-    "subject": "required|string",
+    "subject": "requiredWithout:templateId|string",
     "text": "sometimes|string",
     "html": "sometimes|string",
     "isMultiple": "sometimes|boolean",
