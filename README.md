@@ -1,6 +1,8 @@
 # Azure function mail sendgrid
 
-# Development setup
+## Setup
+
+### Development setup
 Create/Update **local.settings.json** with this:
 ```javascript
 {
@@ -15,15 +17,17 @@ Create/Update **local.settings.json** with this:
   }
 ```
 
-# Setup in Azure
+### Setup in Azure
 
 1. Publish Azure function
 1. In Configuration in your Azure function, add these Application settings
     1. SENDGRID_API_KEY
+1. Create a service bus and update **local.settings.json** above correctly
+1. Create a SendGrid account from your Azure tenant and update **local.settings.json** above correctly
 
-# Inputs
+## Inputs
 
-## without templating
+### without templating
 
 ```javascript
 {
@@ -44,7 +48,7 @@ Create/Update **local.settings.json** with this:
 }
 ```
 
-## with templating
+### with templating
 
 ```javascript
 {
@@ -77,7 +81,7 @@ Create/Update **local.settings.json** with this:
 }
 ```
 
-## with attachments
+### with attachments
 
 ```javascript
 {
