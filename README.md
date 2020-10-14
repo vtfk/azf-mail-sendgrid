@@ -3,6 +3,7 @@
 ## Setup
 
 ### Development setup
+
 Create/Update **local.settings.json** with this:
 ```javascript
 {
@@ -25,7 +26,9 @@ Create/Update **local.settings.json** with this:
 1. Create a service bus and update **local.settings.json** above correctly
 1. Create a SendGrid account from your Azure tenant and update **local.settings.json** above correctly
 
-## Inputs
+## Inputs (POST)
+
+/SendMail
 
 ### without templating
 
@@ -95,3 +98,12 @@ Create/Update **local.settings.json** with this:
     ]
 }
 ```
+
+## Get template handlebars (GET) (*template/{template}*)
+
+### Get all templates
+/template/all
+
+
+### Get specific template
+/template/example
